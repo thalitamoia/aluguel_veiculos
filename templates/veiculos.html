@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Veículos</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Pesquisar Veículo</h2>
+    <form action="/salvar-veiculo" method="POST">
+        <div class="form-group">
+            <label for="tipo">Tipo:</label>
+            <select class="form-control" id="tipo" name="tipo">
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" class="form-control" id="marca" name="marca">
+        </div>
+        <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" name="modelo">
+        </div>
+        <div class="form-group">
+            <label for="transmissao">Transmissão:</label>
+            <select class="form-control" id="transmissao" name="transmissao">
+                <option value="manual">Manual</option>
+                <option value="automatico">Automático</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="numero_pessoas">Número de Pessoas:</label>
+            <input type="number" class="form-control" id="numero_pessoas" name="numero_pessoas">
+        </div>
+        <div class="form-group">
+            <label for="tipo_veiculo">Tipo de Veículo:</label>
+            <select class="form-control" id="tipo_veiculo" name="tipo_veiculo">
+                <option value="suv">SUV</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="luxo">Luxo</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    {% set mensagem = get_flashed_messages() %}
+    {% if mensagem %}
+        <div class="flash_alerta">
+            {{mensagem[0]}}
+        </div>
+    {% endif %}
+    <div class="container">
+        <div class="image-container">
+            <img src="../static/img/family.png" alt="Imagem de Aluguel de Veículos">
+
+        </div>
+        <div class="form-container">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <input type="email" name="email" placeholder="Email:" required>
+                    <input type="password" name="senha" placeholder="Senha:" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <div class="signup-form">
+                <h2>Cadastre-se</h2>
+                <p>Ainda não tem cadastro? Cadastre-se no site.</p>
+                <form action="/redirecionar_para_cadastro" method="post">
+                    <button name="cadastro">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

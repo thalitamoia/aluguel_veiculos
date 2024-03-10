@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Adicione estilos personalizados, se necessário -->
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados da Pesquisa</h1>
+        <div class="row">
+            {% if veiculos %}
+                {% for veiculo in veiculos %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="{{ veiculo.imagem }}" class="card-img-top" alt="Imagem do Veículo">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ veiculo.marca }} {{ veiculo.modelo }}</h5>
+                                <p class="card-text">Tipo: {{ veiculo.tipo }}</p>
+                                <p class="card-text">Transmissão: {{ veiculo.transmissao }}</p>
+                                <p class="card-text">Número de Pessoas: {{ veiculo.numero_pessoas }}</p>
+                                <p class="card-text">Tipo de Veículo: {{ veiculo.tipo_veiculo }}</p>
+                                <a href="{{ url_for('detalhes_veiculo', id=veiculo.id) }}" class="btn btn-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Nenhum veículo encontrado com os critérios de pesquisa fornecidos.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

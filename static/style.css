@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    
+}
+
+.image-container {
+    flex: 1.5;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form, .signup-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    background-color: #F8E687;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #b4cbcf;
+}
+.signup-form button{
+    width: 100%;
+    padding: 10px;
+    background-color: #F8E687;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signup-form button:hover {
+    background-color: #b4cbcf;
+}
+
+
+
+
+.container_cadastro{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  
+
+}
+
+.container_cadastro button{
+    width: 100%;
+    padding: 10px;
+    background-color: #F8E687;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.flash_alerta{
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 30%;
+}
